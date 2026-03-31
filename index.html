@@ -6,101 +6,61 @@
 <title>A1 FITNESS</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0f0f0f;
-    color: white;
-}
+body { margin:0; font-family:Arial; background:#0f0f0f; color:white; }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background: black;
-    position: sticky;
-    top: 0;
+    display:flex; justify-content:space-between;
+    padding:15px 30px; background:black;
 }
+header h1 { color:#00ffcc; }
 
-header h1 {
-    color: #00ffcc;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
+nav a { color:white; margin:0 10px; text-decoration:none; }
 
 .hero {
-    height: 90vh;
-    background: url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61') no-repeat center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') center/cover;
+    display:flex; flex-direction:column;
+    justify-content:center; align-items:center;
 }
-
-.hero h2 {
-    font-size: 50px;
-}
+.hero h2 { font-size:50px; }
 
 .btn {
-    background: #00ffcc;
-    color: black;
-    padding: 12px 25px;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
+    background:#00ffcc; color:black;
+    padding:10px 20px; border:none;
+    cursor:pointer;
 }
 
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
+.section { padding:50px 20px; text-align:center; }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+.cards { display:flex; flex-wrap:wrap; justify-content:center; }
 
 .card {
-    background: #1a1a1a;
-    margin: 10px;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    transition: 0.3s;
+    background:#1a1a1a;
+    margin:10px; padding:20px;
+    width:250px; border-radius:10px;
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* Gallery */
+.gallery img {
+    width:300px; margin:10px;
+    border-radius:10px;
 }
 
-form input, form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px;
-    border: none;
+/* Pricing */
+.price {
+    font-size:25px;
+    color:#00ffcc;
 }
 
-.footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
-}
+.footer { background:black; padding:20px; text-align:center; }
 
-/* WhatsApp Button */
+/* WhatsApp */
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: green;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 20px;
+    position:fixed;
+    bottom:20px; right:20px;
+    background:green;
+    padding:15px;
+    border-radius:50%;
 }
 </style>
 
@@ -108,59 +68,82 @@ form input, form textarea {
 <body>
 
 <header>
-    <h1>A1 FITNESS 💪</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h1>A1 FITNESS 💪</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#plans">Plans</a>
+<a href="#reviews">Reviews</a>
+</nav>
 </header>
 
 <div class="hero">
-    <h2>Build Your Dream Body</h2>
-    <p>Premium Gym in Khordha</p>
-    <button class="btn">Join Now</button>
+<h2>Transform Your Body</h2>
+<p>Best Gym in Khordha</p>
+<button class="btn">Join Now</button>
 </div>
 
-<div class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="cards">
-        <div class="card">🏋️ Strength Training</div>
-        <div class="card">🔥 Fat Loss Programs</div>
-        <div class="card">💪 Personal Training</div>
-        <div class="card">🥗 Diet Guidance</div>
-    </div>
+<!-- GALLERY -->
+<div class="section" id="gallery">
+<h2>Our Gym 🏋️</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e">
+<img src="https://images.unsplash.com/photo-1558611848-73f7eb4001ab">
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
+</div>
 </div>
 
+<!-- MEMBERSHIP -->
+<div class="section" id="plans">
+<h2>Membership Plans 💰</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Basic</h3>
+<p class="price">₹999/month</p>
+<p>Gym Access</p>
+</div>
+
+<div class="card">
+<h3>Standard</h3>
+<p class="price">₹1499/month</p>
+<p>Gym + Cardio</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<p class="price">₹1999/month</p>
+<p>Personal Trainer + Diet</p>
+</div>
+
+</div>
+</div>
+
+<!-- REVIEWS -->
+<div class="section" id="reviews">
+<h2>Customer Reviews ⭐</h2>
+<div class="cards">
+
+<div class="card">"Clean, spacious, all machines available."</div>
+
+<div class="card">"Premium equipment and friendly trainers."</div>
+
+<div class="card">"Affordable and great gym 👍"</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
 <div class="section">
-    <h2>Why Choose Us?</h2>
-    <div class="cards">
-        <div class="card">✔ Premium Equipment</div>
-        <div class="card">✔ AC & Clean Environment</div>
-        <div class="card">✔ Friendly Trainers</div>
-    </div>
+<h2>Contact</h2>
+<p>📍 Khurdha Main Rd, near Bank of India</p>
+<p>📞 093370 67050</p>
 </div>
 
-<div class="section">
-    <h2>Join Now</h2>
-    <form>
-        <input type="text" placeholder="Your Name"><br>
-        <input type="number" placeholder="Phone Number"><br>
-        <textarea placeholder="Your Goal"></textarea><br>
-        <button class="btn">Submit</button>
-    </form>
-</div>
-
-<div class="section" id="contact">
-    <h2>Contact</h2>
-    <p>📍 Khurdha Main Rd, near Bank of India</p>
-    <p>📞 093370 67050</p>
-</div>
-
-<a href="https://wa.me/919337067050" class="whatsapp">💬</a>
+<a href="https://wa.me/919337067050?text=I want to join A1 Fitness" class="whatsapp">💬</a>
 
 <div class="footer">
-    © 2026 A1 FITNESS | Premium Website
+© 2026 A1 FITNESS | Premium Website
 </div>
 
 </body>
